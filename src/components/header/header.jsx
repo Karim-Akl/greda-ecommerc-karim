@@ -1,7 +1,4 @@
 "use client";
-
-
-
 import "./header.css";
 import "../../../public/style.css";
 import "../../app/globals.css";
@@ -109,16 +106,16 @@ const Header = () => {
     <div className="menus">
     <i onClick={()=>setactivee(!active)} className="fa-solid fa-bars icon-paragraph-right  icon-menu" />
     </div>
-    <a
+    <Link
       className="logo"
-      href=""
+      href="/"
     >
       {' '}
       <img
         alt=""
         src="img/logo_v.png"
       />
-    </a>
+    </Link>
     <form
       action=""
       className="search">
@@ -139,27 +136,27 @@ const Header = () => {
   </div>
   <nav>
     <div className="links">
-      <div className="loging">
+      {/* <div className="loging">
       <i className="fa-solid fa-bars icon-paragraph-right  icon-menu" />
       <a href="">
           تصنيفات المنتجات
         </a>
-      </div>
+      </div> */}
       <ul className={active ? 'active' : ''}>
-        <li className="active">
+        {/* <li className="active">
           <a href="">
             عروض الافتتاح
           </a>
-        </li>
+        </li> */}
         <li>
-          <a href="">
+          <Link href="/">
             الرئيسية
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="">
+          <Link href="/product-category">
             المتجر
-          </a>
+          </Link>
         </li>
         <li>
           <a href="">
@@ -297,9 +294,9 @@ const Header = () => {
           </ul>
         </li>
         <li>
-          <a href="">
+          <Link href="/contact">
             تواصل معنا
-          </a>
+          </Link>
         </li>
       </ul>
     </div>
